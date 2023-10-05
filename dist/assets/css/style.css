@@ -80,6 +80,14 @@ body .pink-button {
   text-decoration: none !important;
 }
 
+.bloc-realisation .card {
+  position: relative;
+}
+.bloc-realisation .card-body {
+  position: absolute;
+  bottom: 0;
+}
+
 /********* Bloc Technologies ************/
 .logos-technos .col {
   height: 300px;
@@ -104,6 +112,28 @@ body .pink-button {
 }
 .logos-technos .col:nth-child(4) {
   background-color: #41B883;
+}
+
+/********* Bloc témoignages **************/
+.bloc-temoignages {
+  position: relative;
+  max-width: 17rem !important;
+  margin-top: 5rem;
+  border-radius: 30px;
+}
+.bloc-temoignages img {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 75%;
+}
+.bloc-temoignages p {
+  margin-top: 2rem;
+}
+.bloc-temoignages span {
+  font-size: 12px;
 }
 
 /******** Bloc Blog ACSEO ********/

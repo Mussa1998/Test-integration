@@ -98,6 +98,16 @@ body {
     } 
 }
 
+.bloc-realisation {
+    .card {
+        position: relative;
+    }
+    .card-body {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
 /********* Bloc Technologies ************/
 .logos-technos {
     .col {
@@ -126,6 +136,31 @@ body {
         background-color: $greenVueJs;
     }
 }
+
+/********* Bloc témoignages **************/
+.bloc-temoignages {
+    position: relative;
+    max-width: 17rem !important;
+    margin-top: 5rem;
+    border-radius: 30px;
+
+    img {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 75%;
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+    span {
+        font-size: 12px;
+    }
+}
+
 
 /******** Bloc Blog ACSEO ********/
 .blog {
