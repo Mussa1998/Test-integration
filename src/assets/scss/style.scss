@@ -140,7 +140,7 @@ body {
 /********* Bloc témoignages **************/
 .bloc-temoignages {
     position: relative;
-    max-width: 17rem !important;
+    max-width: 15rem !important;
     margin-top: 5rem;
     border-radius: 30px;
 
@@ -159,8 +159,22 @@ body {
     span {
         font-size: 12px;
     }
-}
 
+}
+.slick-dots {
+    li {
+        button {
+            &::before {
+                content: "" !important; 
+                background-color: $black;
+                width: 30px;
+                height: 30;
+                border-radius: 50px;
+            }
+        }
+    }
+    
+}
 
 /******** Bloc Blog ACSEO ********/
 .blog {
