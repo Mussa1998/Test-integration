@@ -12,102 +12,105 @@
     <title>Page d'accueil ACSEO</title>
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Logo de ACSEO"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse hover-dropdown font-14 ml-auto bloc-menu-navigation" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Expertise
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Conseil en stratégie digitale</a></li>
-                <li><a class="dropdown-item" href="#">Design & UX</a></li>
-                <li><a class="dropdown-item" href="#">Développement web</a></li>
-                <li><a class="dropdown-item" href="#">Application mobile</a></li>
-                <li><a class="dropdown-item" href="#">E-commerce</a></li>
-                <li><a class="dropdown-item" href="#">Innovation</a></li>
-                <li><a class="dropdown-item" href="#">Carte de service</a></li>
-                <li><a class="dropdown-item" href="#">Programme de Startup</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Technologies & CMS
-              </a>
-              <ul class="dropdown-menu">
-                <div class="sous-menu-double">
-                  <div>
-                    <p><strong>Technologies</strong></p>
-                    <li><a class="dropdown-item" href="#">PHP / Symfony</a></li>
-                    <li><a class="dropdown-item" href="#">Vue / JS</a></li>
-                    <li><a class="dropdown-item" href="#">Angular</a></li>
-                    <li><a class="dropdown-item" href="#">Node JS</a></li>
-                    <li><a class="dropdown-item" href="#">React</a></li>
-                    <li><a class="dropdown-item" href="#">React Native</a></li>
+    <div class="header-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand logo-img" href="#"><img src="assets/images/logo.png" alt="Logo de ACSEO"></a>
+          <a href="#" class="icone-mail-phone"><img src="assets/images/mail.png" alt="" srcset=""></a>   
+          <div class="collapse navbar-collapse hover-dropdown font-14 ml-auto bloc-menu-navigation" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle for-border-left" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Expertise
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Conseil en stratégie digitale</a></li>
+                  <li><a class="dropdown-item" href="#">Design & UX</a></li>
+                  <li><a class="dropdown-item" href="#">Développement web</a></li>
+                  <li><a class="dropdown-item" href="#">Application mobile</a></li>
+                  <li><a class="dropdown-item" href="#">E-commerce</a></li>
+                  <li><a class="dropdown-item" href="#">Innovation</a></li>
+                  <li><a class="dropdown-item" href="#">Carte de service</a></li>
+                  <li><a class="dropdown-item" href="#">Programme de Startup</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle for-border-left" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Technologies & CMS
+                </a>
+                <ul class="dropdown-menu">
+                  <div class="sous-menu-double">
+                    <div>
+                      <p><strong>Technologies</strong></p>
+                      <li><a class="dropdown-item" href="#">PHP / Symfony</a></li>
+                      <li><a class="dropdown-item" href="#">Vue / JS</a></li>
+                      <li><a class="dropdown-item" href="#">Angular</a></li>
+                      <li><a class="dropdown-item" href="#">Node JS</a></li>
+                      <li><a class="dropdown-item" href="#">React</a></li>
+                      <li><a class="dropdown-item" href="#">React Native</a></li>
+                    </div>
+                    <div>
+                      <p><strong>CMS</strong></p>
+                      <li><a class="dropdown-item" href="#">WordPress</a></li>
+                      <li><a class="dropdown-item" href="#">Sylius</a></li>
+                      <li><a class="dropdown-item" href="#">Shopify</a></li>
+                      <li><a class="dropdown-item" href="#">WooCommerce</a></li>
+                      <li><a class="dropdown-item" href="#">Prestashop</a></li>
+                    </div>
                   </div>
-                  <div>
-                    <p><strong>CMS</strong></p>
-                    <li><a class="dropdown-item" href="#">WordPress</a></li>
-                    <li><a class="dropdown-item" href="#">Sylius</a></li>
-                    <li><a class="dropdown-item" href="#">Shopify</a></li>
-                    <li><a class="dropdown-item" href="#">WooCommerce</a></li>
-                    <li><a class="dropdown-item" href="#">Prestashop</a></li>
-                  </div>
-                </div>
-                
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Réalisations
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Industrie</a></li>
-                <li><a class="dropdown-item" href="#">Santé</a></li>
-                <li><a class="dropdown-item" href="#">Médias</a></li>
-                <li><a class="dropdown-item" href="#">Institutionnels</a></li>
-                <li><a class="dropdown-item" href="#">IOT</a></li>
-                <li><a class="dropdown-item" href="#">Start-ups</a></li>
-                <li><a class="dropdown-item" href="#">E-commerce</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Agences
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Aix-en-Provence</a></li>
-                <li><a class="dropdown-item" href="#">Montpellier</a></li>
-                <li><a class="dropdown-item" href="#">Paris</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Équipe</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link pink-button btn-nav-contact" href="#">Contactez-nous</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle for-border-left" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Réalisations
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Industrie</a></li>
+                  <li><a class="dropdown-item" href="#">Santé</a></li>
+                  <li><a class="dropdown-item" href="#">Médias</a></li>
+                  <li><a class="dropdown-item" href="#">Institutionnels</a></li>
+                  <li><a class="dropdown-item" href="#">IOT</a></li>
+                  <li><a class="dropdown-item" href="#">Start-ups</a></li>
+                  <li><a class="dropdown-item" href="#">E-commerce</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle for-border-left" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Agences
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Aix-en-Provence</a></li>
+                  <li><a class="dropdown-item" href="#">Montpellier</a></li>
+                  <li><a class="dropdown-item" href="#">Paris</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link for-border-left" href="#">Équipe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link item-blog" href="#">Blog</a>
+              </li>
+            </ul>
+            <div class="btn-nav">
+              <a href="#" class="btn pink-button">Contactez-nous</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1 class="blue-bar-title">PROJETS WEB <br /> ET MOBILES</h1>
-          <p class="mb-30">Depuis 2009, nous concevons et réalisons des applications web et mobiles complexes à 
+          <h1>PROJETS WEB <br /><span class="btm-title">ET MOBILES</span></h1>
+          <p class="mb-5 history-acseo">Depuis 2009, nous concevons et réalisons des applications web et mobiles complexes à 
           forte valeur ajoutée, avec la conviction que les nouvelles technologies sont un facilitateur d'innovation.</p>
-          <a href="#" class="btn pink-button">Contactez-nous</a>
+          <a href="#" class="btn pink-button text-center">Contactez-nous</a>
         </div>
-        <div class="col">
+        <div class="col header-img">
           <img src="assets/images/agence-web-acseo.png" alt="Techno utilisées">
         </div>
       </div>
@@ -117,10 +120,10 @@
     <section class="bg-body-tertiary ">
       <div class="container text-center">
         <h2 class="blue-bar-title mt-5 pt-5">Nos expertises</h2>
-        <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+        <p class="pb-5 description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="row my-5">
+        ullamco labcommodo consequat.</p>
+        <div class="row my-5 row-cols-md-2">
           <div class="col">
             <img src="assets/images/illu.png" alt="Image-illu" srcset="">
             <h4>Conseil stratégie digitale</h4>
@@ -134,11 +137,12 @@
             <p><a href="#" class="link-pink">En savoir plus</a></p>
           </div>
           <div class="col">
-            <img src="assets/images/dvt-web.png" alt="Image-illu" srcset="">
-            <h4>Développement web</h4>
+            <img src="assets/images/centre-de-service.png" alt="Image-illu" srcset="">
+            <h4>Centre de service</h4>
             <p>Lorem ipsum dolor sti amet. consectelur adipisicng alit!</p>
             <p><a href="#" class="link-pink">En savoir plus</a></p>
           </div>
+
           <div class="col">
             <img src="assets/images/app-mobile.png" alt="Image-illu" srcset="">
             <h4>Application mobile</h4>
@@ -146,7 +150,7 @@
             <p><a href="#" class="link-pink">En savoir plus</a></p>
           </div>
         </div>
-        <div class="row py-5">
+        <div class="row py-5 row-cols-sm-2">
           <div class="col">
             <img src="assets/images/e-commerce.png" alt="Image-illu" srcset="">
             <h4>E-commerce</h4>
@@ -160,11 +164,12 @@
             <p><a href="#" class="link-pink">En savoir plus</a></p>
           </div>
           <div class="col">
-            <img src="assets/images/centre-de-service.png" alt="Image-illu" srcset="">
-            <h4>Centre de service</h4>
+            <img src="assets/images/dvt-web.png" alt="Image-illu" srcset="">
+            <h4>Développement web</h4>
             <p>Lorem ipsum dolor sti amet. consectelur adipisicng alit!</p>
             <p><a href="#" class="link-pink">En savoir plus</a></p>
           </div>
+
           <div class="col">
             <img src="assets/images/tma.png" alt="Image-illu" srcset="">
             <h4>TMA</h4>
@@ -192,7 +197,7 @@
               <h5 class="card-title text-white">JPP TV</h5>
               <div class="blog">
                 <span class="text-white">Développement - Symfony</span>
-                <a href=""><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
               </div>
             </div>
           </div>
@@ -205,7 +210,7 @@
               <h5 class="card-title text-white">Site E-commerce</h5>
               <div class="blog">
                 <span class="text-white">Développement - Symfony - E-commerce</span>
-                <a href=""><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
               </div>
             </div>
           </div>
@@ -217,8 +222,8 @@
               <p class="card-text my-3"><img src="assets/images/logo tf1.png" alt="" srcset=""></p>
               <h5 class="card-title text-white">Développement web</h5>
               <div class="blog">
-                <span class="text-white">Développement - Front - Back-end</span>
-                <a href=""><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <span class="text-secondary">Le 15/01/2022</span>
+                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
               </div>
             </div>
           </div>
@@ -299,7 +304,7 @@
           <p>React & React Native</p>
         </div>
         <div class="col">
-          <img src="assets/images/nodejs-blanc%201.png" alt="Logo NodeJS" srcset="">
+          <img class="nodejs-logo" src="assets/images/nodejs-blanc%201.png" alt="Logo NodeJS" srcset="">
           <p>NodeJs</p>
         </div>
         <div class="col">
@@ -307,7 +312,7 @@
           <p>VueJS</p>
         </div>
       </div>
-      <p class="my-5 pb-5"><a href="#" class="btn link-pink"><strong>Voir toutes les technologies</strong></a></p>
+      <p class="my-5 pb-5 my-2-md"><a href="#" class="btn link-pink"><strong>Voir toutes les technologies</strong></a></p>
     </div>
     <!--End Bloc Technologies -->
 
@@ -323,11 +328,11 @@
             <div class="card h-100">
               <img src="assets/images/img-bloc-1.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Débugger un projet PHP Symfony en 2021</h5>
+                <h5 class="card-title blog-title">Débugger un projet PHP Symfony en 2021</h5>
                 <p class="card-text my-3">Si debugger, c’est supprimer des bugs, alors programmer ne peut être (...)</p>
                 <div class="blog">
                   <span class="text-secondary">Le 15/01/2022</span>
-                  <a href=""><img src="assets/images/actif.png" alt="" srcset=""></a>
+                  <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
                 </div>
               </div>
             </div>
@@ -336,11 +341,11 @@
             <div class="card h-100">
               <img src="assets/images/img-blog-2.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">ACSEO finalise l'Audit de 3 applications Symfony</h5>
+                <h5 class="card-title blog-title">ACSEO finalise l'Audit de 3 applications Symfony</h5>
                 <p class="card-text my-3">C'est l'été, profitez du temps relativement calme pour effectuer un audit de (...)</p>
                 <div class="blog">
                   <span class="text-secondary">Le 15/01/2022</span>
-                  <a href=""><img src="assets/images/actif.png" alt="" srcset=""></a>
+                  <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
                 </div>
               </div>
             </div>
@@ -349,7 +354,7 @@
             <div class="card h-100">
               <img src="assets/images/img-blog-3.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Comment réussir votre cahier des charges</h5>
+                <h5 class="card-title blog-title">Comment réussir votre cahier des charges</h5>
                 <p class="card-text my-3">La rédaction de votre cahier des charges et une des étapes essentielles (...)</p>
                 <div class="blog">
                   <span class="text-secondary">Le 15/01/2022</span>
@@ -371,22 +376,10 @@
     </div>
     <!--End Bloc Idée/Projet -->
 
-
-    <div class="row slick-c">
-      
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-      <div class="col"><img src="assets/images/img-blog-3.png" class="card-img-top" alt="..."></div>
-    </div>
-
-
     <!--Footer-->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row container-footer">
           <div class="col bloc-col-footer">
             <img src="assets/images/logo-footer.png" alt="Logo d'ACSEO dans le footer" srcset=""><br /><br>
             <p><strong>SIÈGE SOCIAL</strong> <br />1060 rue René Descartes <br />13290 | Aix-en-Provence <br/>04 42 38 70 46</p>
@@ -408,7 +401,7 @@
             <p><a href="#">Application mobile</a></p>
             <p><a href="#">E-commerce</a></p>
           </div>
-          <div class="col pl-30">
+          <div class="col last-col-footer">
             <h5>LES AGENCES ACSEO</h5>
             <p><a href="#">L'agence d'Aix-en-Provence</a></p>
             <p><a href="#">L'agence de Paris</a></p>

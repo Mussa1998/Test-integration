@@ -5,6 +5,53 @@
     box-sizing: border-box;
 }
 
+/******** Mixin pour le responsive *********/
+@mixin extra-small {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: 768px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin extra-large {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+
+/* Mixin button */
+@mixin pink-button-style {
+    background-color: $pink;
+    border-radius: 50px;
+    color: $white;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-decoration: none !important;
+    border: 2px solid $pink;
+    &:hover {
+        border: 2px solid $pink;
+        color: $pink;
+    }
+}
+
 /* Couleurs */
 $pink : #FF6D74;
 $black : #000000;
@@ -20,22 +67,33 @@ $colorBarTitles: #A7D8DB;
 /* Class génériques */
 h1 {
     color: $black;
-    font-size: 60px !important;
+    font-size: 60px;
     padding: 80px 0 50px 0;
     line-height: 62px;
     font-weight: 900;
     position: relative;
     z-index: 1;
+
+    @include small {
+        font-size: 40px;
+        line-height: 42px;
+        text-align: center;
+    }
     &::before {
         position: absolute;
         content: '';
         display: inline-block;
-        width: 55%;
+        width: 63%;
         height: 20px;
         top: 117px;
         left: 5px;
         background-color: $colorBarTitles;
         z-index: -1;
+
+        @include small {
+            top: 100px;
+            left: 70px;
+        }
     }
 }
 
@@ -56,6 +114,16 @@ h2 {
     }
 }
 
+.description {
+    width: 800px;
+    margin: auto !important;
+}
+.history-acseo {
+    width: 470px;
+    text-align: justify;
+    color: gray;
+}
+
 .link-pink {
     color: $pink;
     text-decoration: underline;
@@ -65,28 +133,64 @@ h2 {
     }
 }
 
-/* Mixin */
-@mixin pink-button-style {
-    background-color: $pink;
-    border-radius: 50px;
-    color: $white;
-    font-size: 16px;
-    padding: 10px 30px;
-    text-decoration: none !important;
+.icone-mail-phone {
+    display: none;
+
+    @include small {
+        display: block;
+        img {
+            width: 40px;
+        }
+    }
+}
+
+.logo-img {
+    @include small {
+        img {
+            height: 35px;
+        }
+    }
 }
 
 /* Header et menu de navigation */
 body {
+    .header-top {
+        box-shadow: 0 0 30px rgba(115,128,157,.3);
+    }
     .bloc-menu-navigation {
         justify-content: center;
 
         .nav-item {
-            border-right: 1px solid $blueExtraLight;
+            .for-border-left {
+                border-right: 1px solid $blueExtraLight;
+                color: $black;
+                padding: 10px 20px;
+                @include small {
+                    border: none;
+                }
+                &:hover {
+                    color: $pink;
+                    text-decoration: underline;
+                }
+            }
+            .item-blog {
+                padding: 10px 20px;
+                color: $black;
+                &:hover {
+                color: $pink;
+                text-decoration: underline;
+                }
+            }
+            .dropdown-menu {
+                margin-top: 16px;
+                padding: 15px;
+            }
         }
-
-        .btn-nav-contact {
+        .btn-nav {
             margin-left: 50px;
-            border: none;
+            @include small {
+                display: none;
+            }
         }
     }
     .sous-menu-double {
@@ -95,7 +199,15 @@ body {
     }
     .pink-button {
         @include pink-button-style();
+        @include small {
+            text-align: center;
+        }
     } 
+    .header-img {
+        @include small {
+            display: none;
+        }
+    }
 }
 
 .bloc-realisation {
@@ -121,6 +233,11 @@ body {
         p {
             color: $white;
             margin: 20px 0;
+        }
+        .nodejs-logo {
+            @include small {
+                width: 122px;
+            }
         }
     }
     .col:nth-child(1) {
@@ -177,10 +294,16 @@ body {
 }
 
 /******** Bloc Blog ACSEO ********/
+.blog-title{
+    color: $blueLight;
+}
 .blog {
     display: flex;
     justify-content: space-between;
 
+    img:hover {
+        opacity: 0.6;
+    }
 }
 
 /****** footer ********/
@@ -188,27 +311,68 @@ footer {
     background-color: $blueDark;
     padding: 50px 0;
     color: $white;
-    .col:nth-child(2), .col:nth-child(3), .col:nth-child(4) {
-        padding-left: 70px;
+    @include small {
+        padding: 20px 0;
     }
-    .bloc-col-footer {
-        border-right: 1px solid $blueExtraLight;
-    }
-    a {
-        color: $white;
-        text-decoration: none;
+    .container-footer {
+        @include small {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .col:nth-child(2), .col:nth-child(3), .col:nth-child(4) {
+            padding-left: 70px;
+            @include small {
+                padding: 0;
+            }
+        }
+        .bloc-col-footer {
+            border-right: 1px solid $blueExtraLight;
+            @include small {
+                border-bottom: 1px solid $blueExtraLight;
+                text-align: center;
+                margin: 20px 0;
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        .last-col-footer {
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+            @include small {
+                text-align: center;
+            }
+        }
     }
 }
 .footer-btm {
+    @include small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     p {
         margin: 10px 0;
         font-weight: 600;
+        @include small {
+            text-align: center;
+            margin-top: 20px;
+        }
     }
     .legals {
         text-align: right;
+        @include small {
+            text-align: center;
+        }
         a {
             color: $black;
             text-decoration: none;
         }
     }
 }
+
