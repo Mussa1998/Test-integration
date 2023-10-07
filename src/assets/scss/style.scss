@@ -65,14 +65,29 @@ $colorBarTitles: #A7D8DB;
 
 
 /* Class génériques */
-h1 {
+.pink {
+    color: $pink;
+}
+.blue {
+    color: $colorBarTitles;
+}
+.blueDark {
+    color: $blueDark;
+}
+.blueLight {
+    color: $blueLight;
+}
+
+.title-for-home {
     color: $black;
     font-size: 60px;
-    padding: 80px 0 50px 0;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
     line-height: 62px;
     font-weight: 900;
     position: relative;
     z-index: 1;
+    font-style: normal;
 
     @include small {
         font-size: 40px;
@@ -83,9 +98,29 @@ h1 {
         position: absolute;
         content: '';
         display: inline-block;
-        width: 63%;
+        width: 62%;
         height: 20px;
-        top: 117px;
+        top: 37px;
+        left: 5px;
+        background-color: $colorBarTitles;
+        z-index: -1;
+
+        @include small {
+            top: 100px;
+            left: 70px;
+        }
+    }
+}
+.btm-title {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        width: 98%;
+        height: 20px;
+        top: 37px;
         left: 5px;
         background-color: $colorBarTitles;
         z-index: -1;
@@ -113,7 +148,10 @@ h2 {
         z-index: -1;
     }
 }
-
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
 .description {
     width: 800px;
     margin: auto !important;
@@ -123,7 +161,6 @@ h2 {
     text-align: justify;
     color: gray;
 }
-
 .link-pink {
     color: $pink;
     text-decoration: underline;
@@ -132,10 +169,8 @@ h2 {
         text-decoration: none;
     }
 }
-
 .icone-mail-phone {
     display: none;
-
     @include small {
         display: block;
         img {
@@ -143,7 +178,6 @@ h2 {
         }
     }
 }
-
 .logo-img {
     @include small {
         img {
@@ -154,9 +188,7 @@ h2 {
 
 /* Header et menu de navigation */
 body {
-    .header-top {
-        box-shadow: 0 0 30px rgba(115,128,157,.3);
-    }
+    
     .bloc-menu-navigation {
         justify-content: center;
 
@@ -165,6 +197,10 @@ body {
                 border-right: 1px solid $blueExtraLight;
                 color: $black;
                 padding: 10px 20px;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
                 @include small {
                     border: none;
                 }
@@ -375,4 +411,36 @@ footer {
         }
     }
 }
+.for-expertise {
+    background-color: $blueDark;
+    padding: 70px;
+    img {
+        float: right;
+    }
+}
 
+/**tecno***/
+.bloc-logo-technos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    background-color: black;
+    margin: 10px;
+}
+    
+
+.test-slick {
+    @include small {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.tem {
+   // width: 300px !important;
+    height: 300px;
+    border-radius: 50px;
+    border: 2px solid gray;
+    margin: 10px;
+}
