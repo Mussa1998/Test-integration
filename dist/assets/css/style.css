@@ -30,6 +30,10 @@
   color: #FFFFFF;
 }
 
+.header-top {
+  box-shadow: 0 0 30px rgba(115, 128, 157, 0.3);
+}
+
 .title-for-home {
   color: #000000;
   font-size: 60px;
@@ -43,6 +47,7 @@
 }
 @media (max-width: 767px) {
   .title-for-home {
+    margin-top: 5rem;
     font-size: 40px;
     line-height: 42px;
     text-align: center;
@@ -61,8 +66,9 @@
 }
 @media (max-width: 767px) {
   .title-for-home::before {
-    top: 100px;
-    left: 70px;
+    top: 20px;
+    left: 65px;
+    width: 60%;
   }
 }
 
@@ -83,8 +89,8 @@
 }
 @media (max-width: 767px) {
   .btm-title::before {
-    top: 100px;
-    left: 70px;
+    top: 20px;
+    left: 2px;
   }
 }
 
@@ -97,11 +103,11 @@ h1 {
   margin: 30px 0;
 }
 
-h2 {
+.heading h2 {
   position: relative;
   z-index: 1;
 }
-h2::before {
+.heading h2::before {
   position: absolute;
   content: "";
   display: inline-block;
@@ -168,23 +174,16 @@ h2::before {
   align-items: center;
 }
 
-.slick-dots li button::before {
-  content: "" !important;
-  background-color: #000000;
-  width: 30px;
-  height: 30;
-  border-radius: 50px;
+@media (max-width: 767px) {
+  .history-acseo {
+    text-align: center;
+  }
 }
 
-.description {
-  width: 800px;
-  margin: auto !important;
-}
-
-.history-acseo {
-  width: 470px;
-  text-align: justify;
-  color: gray;
+@media (max-width: 767px) {
+  .btn-mobile {
+    text-align: center !important;
+  }
 }
 
 .link-pink {
@@ -192,26 +191,40 @@ h2::before {
   text-decoration: underline;
 }
 .link-pink:hover {
-  color: #FF6D74;
-  text-decoration: none;
-}
-
-.icone-mail-phone {
-  display: none;
-}
-@media (max-width: 767px) {
-  .icone-mail-phone {
-    display: block;
-  }
-  .icone-mail-phone img {
-    width: 40px;
-  }
+  color: #007C9F;
 }
 
 @media (max-width: 767px) {
   .logo-img img {
     height: 35px;
   }
+}
+
+/**********Slick carousel **********/
+@media (max-width: 767px) {
+  .car-for-slick {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.car-for-slick .for-slick {
+  height: 300px;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  margin: 11rem 1rem 1rem 1rem;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+
+.slick-dots li button::before {
+  content: "" !important;
+  background-color: #000000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+.slick-dots .slick-active button::before {
+  background-color: #007C9F;
 }
 
 /* Header et menu de navigation */
@@ -230,7 +243,7 @@ body .bloc-menu-navigation .nav-item .for-border-left {
 }
 @media (max-width: 767px) {
   body .bloc-menu-navigation .nav-item .for-border-left {
-    border: none;
+    border-right: none;
   }
 }
 body .bloc-menu-navigation .nav-item .for-border-left:hover {
@@ -245,21 +258,13 @@ body .bloc-menu-navigation .nav-item .item-blog:hover {
   color: #FF6D74;
   text-decoration: underline;
 }
-body .bloc-menu-navigation .nav-item .dropdown-menu {
-  margin-top: 16px;
-  padding: 15px;
-}
 body .bloc-menu-navigation .btn-nav {
   margin-left: 50px;
 }
 @media (max-width: 767px) {
   body .bloc-menu-navigation .btn-nav {
-    display: none;
+    margin-left: 0;
   }
-}
-body .sous-menu-double {
-  display: flex;
-  justify-content: space-between;
 }
 body .pink-button {
   background-color: #FF6D74;
@@ -285,12 +290,32 @@ body .pink-button:hover {
   }
 }
 
+/******** Bloc realisation *******/
 .bloc-realisation .card {
   position: relative;
 }
 .bloc-realisation .card-body {
   position: absolute;
   bottom: 0;
+}
+
+.icon-fleche {
+  display: block;
+  text-align: right;
+  margin-right: 30px;
+}
+@media (max-width: 767px) {
+  .icon-fleche {
+    text-align: center;
+    margin: 0;
+  }
+}
+.icon-fleche a {
+  padding-right: 20px;
+  display: inline-block;
+}
+.icon-fleche a img:hover {
+  opacity: 0.5;
 }
 
 /********* Bloc Technologies ************/
@@ -504,6 +529,128 @@ body .pink-button:hover {
 
 /**** Agence page *******/
 /******** Equipe page ********/
+.team-members img {
+  cursor: pointer;
+}
+.team-members img:hover {
+  filter: contrast(0.5);
+}
+
+/****blog****/
+.col-blog-1 {
+  margin-right: 10px;
+}
+.col-blog-1 .content-blog {
+  margin-left: 10rem;
+}
+
+.col-blog-2 {
+  margin-left: 10px;
+}
+
+/******* Contact page ********/
+@media (max-width: 767px) {
+  .form-container > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  .form-container .form-contact {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .form-container .form-contact h1 {
+    margin-top: 0;
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .form-container .form-contact .bloc-tel {
+    flex-direction: column;
+  }
+}
+.form-container .form-contact h3 {
+  color: #007C9F;
+}
+@media (max-width: 767px) {
+  .form-container .form-contact h3 {
+    text-align: center;
+  }
+}
+.form-container .form-contact p {
+  margin: 2rem 0 3rem 0;
+  font-weight: 600;
+}
+.form-container .form-contact .form-control {
+  border: 1px solid #dee2e6;
+  border-radius: 30px;
+}
+.form-container .form-contact label {
+  font-weight: 600;
+}
+.form-container .form-contact input:focus {
+  border-color: #FF6D74 !important;
+  box-shadow: none;
+}
+.form-container .form-contact textarea:focus {
+  border-color: #FF6D74 !important;
+  box-shadow: none;
+}
+.form-container .form-contact button {
+  background-color: #FF6D74;
+  border-radius: 30px;
+  border: 2px solid #FF6D74;
+  font-size: 20px;
+  font-weight: 600;
+}
+.form-container .form-contact button:hover {
+  background-color: transparent;
+  color: #FF6D74;
+  border: 2px solid #FF6D74;
+}
+@media (max-width: 767px) {
+  .form-container .bloc-infos {
+    width: 100%;
+  }
+}
+.form-container .bloc-infos > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 2rem 2rem 3rem;
+  border-radius: 30px;
+}
+.form-container .bloc-infos > div .logo-acseo {
+  margin-bottom: 4rem;
+}
+.form-container .bloc-infos > div .list {
+  margin-bottom: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  width: 90%;
+  font-size: 20px;
+  font-weight: 600;
+}
+.form-container .bloc-infos > div .list:focus {
+  border-color: 1px solid #FF6D74 !important;
+  box-shadow: none;
+}
+.form-container .bloc-infos > div .coordonnes {
+  margin-bottom: 2rem;
+  line-height: 20px;
+}
+.form-container .bloc-infos > div .socil-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
 /****** footer ********/
 footer {
   background-color: #1E3557;
@@ -530,11 +677,20 @@ footer .container-footer .col:nth-child(2), footer .container-footer .col:nth-ch
     padding: 0;
   }
 }
+footer .container-footer .col-logo {
+  padding-right: 50px;
+}
+@media (max-width: 767px) {
+  footer .container-footer .col-logo {
+    padding: 0;
+  }
+}
 footer .container-footer .bloc-col-footer {
   border-right: 1px solid #61DAFB;
 }
 @media (max-width: 767px) {
   footer .container-footer .bloc-col-footer {
+    border-right: none;
     border-bottom: 1px solid #61DAFB;
     text-align: center;
     margin: 20px 0;
@@ -543,6 +699,18 @@ footer .container-footer .bloc-col-footer {
 footer .container-footer .bloc-col-footer a {
   color: #FFFFFF;
   text-decoration: none;
+}
+footer .container-footer .bloc-col-footer .socil-media-footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  footer .container-footer .bloc-col-footer .socil-media-footer {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
 footer .container-footer .last-col-footer a {
   color: #FFFFFF;
@@ -583,32 +751,6 @@ footer .container-footer .last-col-footer a {
 .footer-btm .legals a {
   color: #000000;
   text-decoration: none;
-}
-
-/****blog****/
-.col-blog-1 {
-  margin-right: 10px;
-}
-.col-blog-1 .content-blog {
-  margin-left: 10rem;
-}
-
-.col-blog-2 {
-  margin-left: 10px;
-}
-
-@media (max-width: 767px) {
-  .test-slick {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.tem {
-  height: 300px;
-  border-radius: 50px;
-  border: 2px solid gray;
-  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

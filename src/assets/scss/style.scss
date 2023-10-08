@@ -81,7 +81,9 @@ $fondColor: #F5F5F5;
 .white {
     color: $white;
 }
-
+.header-top {
+   box-shadow: 0 0 30px rgba(115,128,157,.3);
+}
 .title-for-home {
     color: $black;
     font-size: 60px;
@@ -94,6 +96,7 @@ $fondColor: #F5F5F5;
     font-style: normal;
 
     @include small {
+        margin-top: 5rem;
         font-size: 40px;
         line-height: 42px;
         text-align: center;
@@ -110,8 +113,9 @@ $fondColor: #F5F5F5;
         z-index: -1;
 
         @include small {
-            top: 100px;
-            left: 70px;
+            top: 20px;
+            left: 65px;
+            width: 60%;
         }
     }
 }
@@ -130,8 +134,8 @@ $fondColor: #F5F5F5;
         z-index: -1;
 
         @include small {
-            top: 100px;
-            left: 70px;
+            top: 20px;
+            left: 2px;
         }
     }
 }
@@ -143,21 +147,22 @@ h1 {
     line-height: 62px;
     margin: 30px 0;
 }
-
-h2 {
-    position: relative;
-    z-index: 1;
-    &::before {
-        position: absolute;
-        content: '';
-        display: inline-block;
-        width: 160px;
-        height: 20px;
-        top: 65px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $colorBarTitles;
-        z-index: -1;
+.heading {
+    h2 {
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 160px;
+            height: 20px;
+            top: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $colorBarTitles;
+            z-index: -1;
+        }
     }
 }
 .list-acseo {
@@ -217,50 +222,64 @@ h2 {
         align-items: center;
     }
 }
-.slick-dots {
-    li {
-        button {
-            &::before {
-                content: "" !important; 
-                background-color: $black;
-                width: 30px;
-                height: 30;
-                border-radius: 50px;
-            }
-        }
-    }
-    
-}
-.description {
-    width: 800px;
-    margin: auto !important;
-}
 .history-acseo {
-    width: 470px;
-    text-align: justify;
-    color: gray;
+    @include small {
+        text-align: center;
+    }
+}
+.btn-mobile {
+    @include small {
+        text-align: center !important;
+    }
 }
 .link-pink {
     color: $pink;
     text-decoration: underline;
     &:hover {
-        color: $pink;
-        text-decoration: none;
-    }
-}
-.icone-mail-phone {
-    display: none;
-    @include small {
-        display: block;
-        img {
-            width: 40px;
-        }
+        color: $blueLight;
     }
 }
 .logo-img {
     @include small {
         img {
             height: 35px;
+        }
+    }
+}
+
+/**********Slick carousel **********/
+.car-for-slick {
+    @include small {
+        display: flex;
+        flex-direction: column;
+    }
+    .for-slick {
+        height: 300px;
+        border-radius: 50px;
+        background-color: $white;
+        margin: 11rem 1rem 1rem 1rem;
+        padding: 5rem 3rem;
+        text-align: center;
+    }
+}
+.slick-dots {
+    li {
+        button {
+            &::before {
+                content: "" !important; 
+                background-color: $black;
+                width: 10px;
+                height: 10px;
+                border-radius: 50px;
+            }
+        }
+    }
+    .slick-active {
+        button {
+            &::before {
+                background-color: $blueLight;
+            }
+            
         }
     }
 }
@@ -280,7 +299,7 @@ body {
                 font-weight: 400;
                 line-height: 20px;
                 @include small {
-                    border: none;
+                    border-right: none;
                 }
                 &:hover {
                     color: $pink;
@@ -295,21 +314,13 @@ body {
                 text-decoration: underline;
                 }
             }
-            .dropdown-menu {
-                margin-top: 16px;
-                padding: 15px;
-            }
         }
         .btn-nav {
             margin-left: 50px;
             @include small {
-                display: none;
+               margin-left: 0;
             }
         }
-    }
-    .sous-menu-double {
-        display: flex;
-        justify-content: space-between;
     }
     .pink-button {
         @include pink-button-style();
@@ -323,7 +334,7 @@ body {
         }
     }
 }
-
+/******** Bloc realisation *******/
 .bloc-realisation {
     .card {
         position: relative;
@@ -331,6 +342,24 @@ body {
     .card-body {
         position: absolute;
         bottom: 0;
+    }
+}
+.icon-fleche {
+    display: block;
+    text-align: right;
+    margin-right: 30px;
+    @include small {
+        text-align: center;
+        margin: 0;
+    }
+    a {
+        padding-right: 20px;
+        display: inline-block;
+        img {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
     }
 }
 
@@ -343,7 +372,6 @@ body {
         align-items: center;
         flex-direction: column;
         padding: 0;
-
         p {
             color: $white;
             margin: 20px 0;
@@ -374,7 +402,6 @@ body {
     max-width: 15rem !important;
     margin-top: 5rem;
     border-radius: 30px;
-
     img {
         width: 100px;
         height: auto;
@@ -383,14 +410,12 @@ body {
         transform: translateX(-50%);
         bottom: 75%;
     }
-
     p {
         margin-top: 2rem;
     }
     span {
         font-size: 12px;
     }
-
 }
 
 /******** Bloc Blog ACSEO ********/
@@ -405,8 +430,6 @@ body {
         opacity: 0.6;
     }
 }
-
-
 
 /******* Expertise page ********/
 .header-expertise {
@@ -547,6 +570,131 @@ body {
 
 
 /******** Equipe page ********/
+.team-members {
+    img {
+        cursor: pointer;
+        &:hover {
+            filter: contrast(0.5);
+        }
+    }
+}
+
+/****blog****/
+.col-blog-1 {
+    margin-right: 10px;
+
+    .content-blog {
+        margin-left: 10rem;
+    }
+}
+.col-blog-2 {
+    margin-left: 10px;
+}
+
+/******* Contact page ********/
+.form-container {
+    @include small {
+        > div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px !important;
+        }
+    }
+    .form-contact {
+        @include small {
+            width: 100%;
+        }
+        h1 {
+            @include small {
+                margin-top: 0;
+                font-size: 45px;
+                text-align: center;
+            }
+        }
+        .bloc-tel {
+            @include small {
+                flex-direction: column;
+            }
+        }
+        h3 {
+            color: #007C9F;
+            @include small {
+                text-align: center;
+            }
+        }
+        p {
+            margin: 2rem 0 3rem 0;
+            font-weight: 600;
+        }
+        .form-control {
+            border: 1px solid #dee2e6;
+            border-radius: 30px;
+        }
+        label {
+            font-weight: 600;
+        }
+        input:focus {
+            border-color: $pink !important;
+            box-shadow: none;
+        }
+        textarea:focus {
+            border-color: $pink !important;
+            box-shadow: none;
+        }
+        button {
+            background-color: $pink;
+            border-radius: 30px;
+            border: 2px solid $pink;
+            font-size: 20px;
+            font-weight: 600;
+            &:hover {
+                background-color: transparent;
+                color: $pink;
+                border: 2px solid $pink;
+    
+            }
+        }
+    }
+    .bloc-infos {
+        @include small {
+            width: 100%;
+        }
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 5rem 2rem 2rem 3rem;
+            border-radius: 30px;
+    
+            .logo-acseo {
+                margin-bottom: 4rem;
+            }
+            .list {
+                margin-bottom: 3rem;
+                border-radius: 30px;
+                text-align: center;
+                width: 90%;
+                font-size: 20px;
+                font-weight: 600;
+                &:focus {
+                    border-color: 1px solid $pink !important;
+                    box-shadow: none;
+                }
+            }
+            .coordonnes {
+                margin-bottom: 2rem;
+                line-height: 20px;
+            }
+            .socil-media {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               gap: 15px;
+            }
+        }
+    }
+}
 
 /****** footer ********/
 footer {
@@ -568,9 +716,16 @@ footer {
                 padding: 0;
             }
         }
+        .col-logo {
+            padding-right: 50px;
+            @include small {
+                padding: 0;
+            }
+        }
         .bloc-col-footer {
             border-right: 1px solid $blueExtraLight;
             @include small {
+                border-right: none;
                 border-bottom: 1px solid $blueExtraLight;
                 text-align: center;
                 margin: 20px 0;
@@ -578,6 +733,17 @@ footer {
             a {
                 color: $white;
                 text-decoration: none;
+            }
+            .socil-media-footer {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 15px;
+
+                @include small {
+                    justify-content: center;
+                    margin-bottom: 10px;
+                }
             }
         }
         .last-col-footer {
@@ -618,34 +784,5 @@ footer {
     }
 }
 
-/****blog****/
-.col-blog-1 {
-    margin-right: 10px;
 
-    .content-blog {
-        margin-left: 10rem;
-    }
-}
-.col-blog-2 {
-    margin-left: 10px;
-}
-
-    
-
-
-
-.test-slick {
-    @include small {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.tem {
-   // width: 300px !important;
-    height: 300px;
-    border-radius: 50px;
-    border: 2px solid gray;
-    margin: 10px;
-}
 

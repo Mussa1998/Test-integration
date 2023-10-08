@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <title>ACSEO</title>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ACSEO est une agence web et mobile, propose de solutions numériques sur mesure">
-    <meta name="keywords" content="html, css, javascript">
+    <meta name="keywords" content="ACSEO, php, html, css, javascript">
+    <meta property="og:site_name" content="ACSEO">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="../dist/assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../dist/assets/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="../dist/assets/css/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="../dist/assets/css/style.css">
-    <title>Page d'accueil ACSEO</title>
   </head>
   <body>
-    <div class="header-top bg-white">
+    <div class="header-top">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand logo-img" href="index.html"><img src="assets/images/logo.png" alt="Logo de ACSEO"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand logo-img" href="index.html"><img src="assets/images/logo.png" alt="Logo de ACSEO"></a>
-          <a href="#" class="icone-mail-phone"><img src="assets/images/mail.png" alt="" srcset=""></a>   
+          </button>         
           <div class="collapse navbar-collapse hover-dropdown font-14 ml-auto bloc-menu-navigation" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -54,7 +56,7 @@
           <h1 class="title-for-home">PROJETS WEB <br /><span class="btm-title">ET MOBILES</span></h1>
           <p class="mb-5 history-acseo">Depuis 2009, nous concevons et réalisons des applications web et mobiles complexes à 
           forte valeur ajoutée, avec la conviction que les nouvelles technologies sont un facilitateur d'innovation.</p>
-          <a href="#" class="btn pink-button text-center">Contactez-nous</a>
+          <p class="btn-mobile"><a href="#" class="btn  pink-button text-center">Contactez-nous</a></p>
         </div>
         <div class="col header-img mt-5">
           <img src="assets/images/illu-hashtag-header.png" alt="Techno utilisées">
@@ -128,22 +130,20 @@
     <!--End Bloc Nos Expertises -->
 
     <!--Bloc Nos Réalisations -->
-    <div class="container">
+    <div class="container-fluid">
       <h2 class="text-center mt-5 pt-5">Nos réalisations</h2>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, .</p>
-    </div>
-    <div class="container-fluid">
+      tempor incididunt ut labore</p><span class="icon-fleche"><a href="#"><img src="assets/images/icones/inactif.png" alt="" srcset=""></a><a href="#"><img src="assets/images/icones/actif.png" alt="" srcset=""></a></span>
       <div class="row row-cols-1 row-cols-md-3 g-4 my-5 bloc-realisation">
         <div class="col">
           <div class="card h-100">
             <img src="assets/images/img-realisation1.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body w-100">
               <p class="card-text my-3"><img src="assets/images/logo tf1.png" alt="" srcset=""></p>
               <h5 class="card-title text-white">JPP TV</h5>
               <div class="blog">
                 <span class="text-white">Développement - Symfony</span>
-                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <a href="#"><img src="assets/images/cta.png" alt="" srcset=""></a>
               </div>
             </div>
           </div>
@@ -151,12 +151,12 @@
         <div class="col">
           <div class="card h-100">
             <img src="assets/images/img-realisation2.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body w-100">
               <p class="card-text my-3"><img src="assets/images/logo tf1.png" alt="" srcset=""></p>
               <h5 class="card-title text-white">Site E-commerce</h5>
               <div class="blog">
-                <span class="text-white">Développement - Symfony - E-commerce</span>
-                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <span class="text-white">Symfony - E-commerce</span>
+                <a href="#"><img src="assets/images/cta.png" alt="" srcset=""></a>
               </div>
             </div>
           </div>
@@ -164,14 +164,15 @@
         <div class="col">
           <div class="card h-100">
             <img src="assets/images/img-realisation1.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body w-100">
               <p class="card-text my-3"><img src="assets/images/logo tf1.png" alt="" srcset=""></p>
               <h5 class="card-title text-white">Développement web</h5>
               <div class="blog">
-                <span class="text-secondary">Le 15/01/2022</span>
-                <a href="#"><img src="assets/images/actif.png" alt="" srcset=""></a>
+                <span class="text-white">Le 15/01/2022</span>
+                <a href="#"><img src="assets/images/cta.png" alt="" srcset=""></a>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -181,38 +182,67 @@
 
     <!--Bloc Témoignages -->
     <section class="bg-body-tertiary">
-      <div class="container text-center">
+      <div class="container text-center mb-0">
         <h2 class="blue-bar-title mt-5 pt-5">Temoignages</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
         et dolore magna aliqua. Ut enim ad minim  consequat.</p>
-        <div class="row d-flex justify-content-center pb-5 bloc-for-slick">
-          <div class="card col bloc-temoignages">
-            <img src="assets/images/img-personne1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elite et dolore magna aliqua.”</p>
-              <p class="m-0"><strong>Martin DUPONT</strong></p>
-              <span class="text-secondary title-post">CEO | Onatera</span>
-            </div>
+        <div class="car-for-slick">
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
           </div>
-          <div class="card col bloc-temoignages mx-3">
-            <img src="assets/images/img-personne1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elite et dolore magna aliqua.”</p>
-              <p class="m-0"><strong>Michèle MOREAU</strong></p>
-              <span class="text-secondary title-post">Product Owner | Travaux.com</span>
-            </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
           </div>
-          <div class="card col bloc-temoignages">
-            <img src="assets/images/img-personne1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elite et dolore magna aliqua.”</p>
-              <p class="m-0"><strong>Sophie MARTIN</strong></p>
-              <span class="text-secondary title-post">Innovation Catalyst | Airbus</span>
-            </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
           </div>
-
-          
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
+          <div class="for-slick bloc-cercle">
+            <span class="cercle"><img src="assets/images/img-personne1.png" alt="" srcset=""></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
+            <h6>Martin DUPONT</h6>
+            <span>CEO | Onatera</span>
+          </div>
         </div>
+      </div>
     </section>
     <!--End Bloc Témoignages -->
 
@@ -226,7 +256,7 @@
     <div class="container-fluid logos-technos text-center my-5">
       <div class="row">
         <div class="col">
-          <img src="assets/images/symfony%201.png" alt="Logo Symfony" srcset="">
+          <img src="assets/images/symfony0 1.png" alt="Logo Symfony" srcset="">
           <p>Symfony</p>
         </div>
         <div class="col">
@@ -299,94 +329,47 @@
     <!--End Bloc Article d'ACSEO -->
 
     <!--Bloc Idée/Projet -->
-    <div class="container text-center">
+    <div class="container text-center last-container">
       <img class="d-bloc mt-5"src="assets/images/hashtag.png" alt="Element hashtag" srcset="">
       <h2 class="mt-3">Une idée, un projet ? <br/> Nous sommes à votre disposition pour discuter</h2>
       <p class="my-5"><a href="#" class="pink-button">Contactez-nous</a></p>
     </div>
     <!--End Bloc Idée/Projet -->
 
-    <div class="container test-slick">
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      <div class="tem">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat magni vitae odio illum reprehenderit labore quisquam officiis possimus odit!</p>
-        <h6>Martin DUPONT</h6>
-        <span>CEO | Onatera</span>
-      </div>
-      
-
-    </div>
-
     <!--Footer-->
     <footer>
       <div class="container">
         <div class="row container-footer">
-          <div class="col bloc-col-footer">
+          <div class="col bloc-col-footer col-logo">
             <img src="assets/images/logo-footer.png" alt="Logo d'ACSEO dans le footer" srcset=""><br /><br>
             <p><strong>SIÈGE SOCIAL</strong> <br />1060 rue René Descartes <br />13290 | Aix-en-Provence <br/>04 42 38 70 46</p>
-            <i>Icones a venir</i>
+            <div class="socil-media-footer">
+              <a href="#"><img src="assets/images/linkedin.png" alt="Icone LinkedIn" srcset=""></a>
+              <a href="#"><img src="assets/images/mail.png" alt="Icone Email" srcset=""></a>
+            </div>
           </div>
           <div class="col bloc-col-footer">
             <h5>À PROPOS</h5>
-            <p><a href="#">Technologies & CMS</a></p>
-            <p><a href="#">Réalisations</a></p>
-            <p><a href="#">Blog</a></p>
-            <p><a href="#">Contactez-nous</a></p>
-            <p><a href="#">Nous rejoindre</a></p>
+            <p><a href="technos.html">Technologies & CMS</a></p>
+            <p><a href="realisations.html">Réalisations</a></p>
+            <p><a href="blog.html">Blog</a></p>
+            <p><a href="contact.html">Contactez-nous</a></p>
+            <p><a href="contact.html">Nous rejoindre</a></p>
           </div>
           <div class="col bloc-col-footer">
             <h5>EXPERTISES</h5>
-            <p><a href="#">Conseil en stratégie digitale</a></p>
-            <p><a href="#">Design et UX</a></p>
-            <p><a href="#">Développement web</a></p>
-            <p><a href="#">Application mobile</a></p>
-            <p><a href="#">E-commerce</a></p>
+            <p><a href="expertise.html">Conseil en stratégie digitale</a></p>
+            <p><a href="expertise.html">Design et UX</a></p>
+            <p><a href="expertise.html">Développement web</a></p>
+            <p><a href="expertise.html">Application mobile</a></p>
+            <p><a href="expertise.html">E-commerce</a></p>
           </div>
           <div class="col last-col-footer">
             <h5>LES AGENCES ACSEO</h5>
-            <p><a href="#">L'agence d'Aix-en-Provence</a></p>
-            <p><a href="#">L'agence de Paris</a></p>
-            <p><a href="#">L'agence de Montpellier</a></p>
-            <p><a href="#">Équipe</a></p>
+            <p><a href="agences.html">L'agence d'Aix-en-Provence</a></p>
+            <p><a href="agences.html">L'agence de Paris</a></p>
+            <p><a href="agences.html">L'agence de Montpellier</a></p>
+            <p><a href="equipe.html">Équipe</a></p>
           </div>
         </div>
       </div>
