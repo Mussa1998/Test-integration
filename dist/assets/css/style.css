@@ -26,6 +26,10 @@
   color: #007C9F;
 }
 
+.white {
+  color: #FFFFFF;
+}
+
 .title-for-home {
   color: #000000;
   font-size: 60px;
@@ -84,6 +88,15 @@
   }
 }
 
+h1 {
+  color: #000000;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 62px;
+  margin: 30px 0;
+}
+
 h2 {
   position: relative;
   z-index: 1;
@@ -101,9 +114,66 @@ h2::before {
   z-index: -1;
 }
 
-.container {
-  padding-left: 0;
-  padding-right: 0;
+.list-acseo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.list-acseo p a {
+  margin: 0 20px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #C4C4C4;
+  border: 2px solid #C4C4C4;
+  border-radius: 20px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  min-width: 170px;
+  display: inline-block;
+  text-align: center;
+}
+.list-acseo p a:hover {
+  background-color: #1E3557;
+  border: 2px solid #1E3557;
+  color: #FFFFFF;
+}
+.list-acseo p .list-actif {
+  background-color: #1E3557;
+  color: #FFFFFF;
+  border: 2px solid #1E3557;
+}
+
+.last-container h2::before {
+  width: 18%;
+  top: 20%;
+  left: 50%;
+}
+
+.bloc-cercle {
+  position: relative;
+}
+.bloc-cercle .cercle {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  left: 50%;
+  bottom: 80%;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots li button::before {
+  content: "" !important;
+  background-color: #000000;
+  width: 30px;
+  height: 30;
+  border-radius: 50px;
 }
 
 .description {
@@ -145,6 +215,7 @@ h2::before {
 }
 
 /* Header et menu de navigation */
+/*********** Home page ************/
 body .bloc-menu-navigation {
   justify-content: center;
 }
@@ -275,14 +346,6 @@ body .pink-button:hover {
   font-size: 12px;
 }
 
-.slick-dots li button::before {
-  content: "" !important;
-  background-color: #000000;
-  width: 30px;
-  height: 30;
-  border-radius: 50px;
-}
-
 /******** Bloc Blog ACSEO ********/
 .blog-title {
   color: #007C9F;
@@ -296,6 +359,151 @@ body .pink-button:hover {
   opacity: 0.6;
 }
 
+/******* Expertise page ********/
+.header-expertise {
+  background-color: #1E3557;
+  padding: 70px;
+}
+.header-expertise img {
+  float: right;
+}
+
+.for-expertise h2 {
+  margin-top: 70px;
+}
+.for-expertise h2::before {
+  width: 57%;
+  top: 70%;
+  left: 29%;
+}
+
+.section-expertise {
+  padding: 7rem 0;
+  background-color: #F5F5F5;
+}
+.section-expertise .bloc-expertise {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 8rem 3rem 2rem 2rem;
+  height: 500px;
+}
+
+/******** technos & CMS page ********/
+.bloc-logo-technos-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 310px;
+  margin: 10px;
+}
+
+.bloc-logo-technos-1 {
+  background-color: #000000;
+}
+
+.bloc-logo-technos-2 {
+  background-color: #41B883;
+}
+
+.bloc-logo-technos-3 {
+  background-color: #54C5F8;
+}
+
+.bloc-logo-technos-4 {
+  background-color: #83CD29;
+}
+
+.bloc-logo-technos-5 {
+  background-color: #007DA1;
+}
+
+.bloc-logo-technos-6 {
+  background-color: #61DAFB;
+}
+
+.bloc-logo-technos-7 {
+  background-color: #0087BE;
+}
+
+.bloc-logo-technos-8 {
+  background-color: #3FB499;
+}
+
+.bloc-logo-technos-9 {
+  background-color: #95BF47;
+}
+
+.bloc-logo-technos-10 {
+  background-color: #7F54B3;
+}
+
+.bloc-logo-technos-11 {
+  background-color: #A5DBE8;
+}
+
+/******* Realisations page **********/
+.bloc-r-1 .col-right {
+  background-color: #1E3557;
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 30px;
+}
+.bloc-r-1 .col-right p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.bloc-r-1 .col-right span {
+  display: inline-block;
+  margin-bottom: 60px;
+  position: relative;
+}
+.bloc-r-1 .col-right span::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 1px;
+  top: 60px;
+  left: 0;
+  background-color: #FFFFFF;
+}
+
+.bloc-r-2 .col-right-2 {
+  margin-top: 4rem;
+  padding: 7rem 4rem 4rem 4rem;
+  text-align: center;
+  border-radius: 30px;
+}
+.bloc-r-2 .col-right-3 {
+  margin-top: 30px;
+  padding: 3rem;
+  background-color: #1E3557;
+  text-align: center;
+  border-radius: 30px;
+  color: #FFFFFF;
+}
+.bloc-r-2 .col-right-3 p {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.icon-pre-next {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.for-border {
+  border-top: 2px solid #F5F5F5;
+  border-bottom: 2px solid #F5F5F5;
+}
+
+/**** Agence page *******/
+/******** Equipe page ********/
 /****** footer ********/
 footer {
   background-color: #1E3557;
@@ -377,22 +585,16 @@ footer .container-footer .last-col-footer a {
   text-decoration: none;
 }
 
-.for-expertise {
-  background-color: #1E3557;
-  padding: 70px;
+/****blog****/
+.col-blog-1 {
+  margin-right: 10px;
 }
-.for-expertise img {
-  float: right;
+.col-blog-1 .content-blog {
+  margin-left: 10rem;
 }
 
-/**tecno***/
-.bloc-logo-technos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 310px;
-  background-color: black;
-  margin: 10px;
+.col-blog-2 {
+  margin-left: 10px;
 }
 
 @media (max-width: 767px) {
